@@ -11,10 +11,10 @@ body {
 
 #foto {
 position: relative;
-left: 10%;
-top: 36%;
+left: 15%;
+top: 49%;
 border-radius: 25px;
-margin: 35px 0px 45px 0px;
+
 transform: scale(2.5);
 }
 
