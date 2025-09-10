@@ -25,7 +25,7 @@
       <input id="entrada" type="number">   
          
         <select id="moedas">
-              <option value='NULL'>Selecione</option>
+              <option value='NULL'>Selecione Alguma moeda</option>
               <option value='EUR'>Euro</option>
               <option value='USD'>Dólar</option>
               <option value='USDT'>Dólar turismo</option>
@@ -49,10 +49,10 @@
       <span id="atualizacao"></span>
   </div>  
 
-  <div>
-    <img id="moedaImg" src="" alt="Moeda selecionada">
+  <div id="foto">
+    <img id="moedaImg" src="" alt="">
   </div>
-
+   
   <script>
     const selectMoeda = document.getElementById("moedas");
     const moedaImg = document.getElementById("moedaImg");
@@ -61,7 +61,7 @@
     const imagensMoedas = {
       "EUR": "https://flagcdn.com/w320/eu.png",
       "USD": "https://flagcdn.com/w320/us.png",
-      "USDT": "https://cryptologos.cc/logos/tether-usdt-logo.png",
+      "USDT": "https://s2.coinmarketcap.com/static/img/coins/200x200/825.png",
       "CAD": "https://flagcdn.com/w320/ca.png",
       "AUD": "https://flagcdn.com/w320/au.png",
       "GBP": "https://flagcdn.com/w320/gb.png",
@@ -70,11 +70,11 @@
       "CNY": "https://flagcdn.com/w320/cn.png",
       "CHF": "https://flagcdn.com/w320/ch.png",
       "ILS": "https://flagcdn.com/w320/il.png",
-      "BTC": "https://cryptologos.cc/logos/bitcoin-btc-logo.png",
-      "ETH": "https://cryptologos.cc/logos/ethereum-eth-logo.png",
-      "LTC": "https://cryptologos.cc/logos/litecoin-ltc-logo.png",
-      "DOGE": "https://cryptologos.cc/logos/dogecoin-doge-logo.png",
-      "XRP": "https://cryptologos.cc/logos/xrp-xrp-logo.png"
+      "BTC": "https://rizzattigestao.com.br/wp-content/uploads/Bitcoin.png",
+      "ETH": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/250px-Ethereum_logo_2014.svg.png",
+      "LTC": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgeD5kJK1PyxnJI9tpXXoVkY7I2QSkyP9aGw&s",
+      "DOGE": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2lOzbtjXne-Uao5trJelRRjcaXzAgGkAwY7E1GiYRu6ZMXNQoHH8e6c4t8wKODn97Q6c&usqp=CAU",
+      "XRP": "https://cdn.prod.website-files.com/5ef503b9dcd722d7cc5424e7/5ffcbdc531ae7dbefcdcf353_Ripple%20XRP.png"
     };
 
     // Evento de mudança

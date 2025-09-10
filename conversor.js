@@ -138,4 +138,7 @@ function converter() {
       calcular(xrp, "XRP")
   }
 
-}
+
+
+  }
+  
