@@ -13,9 +13,11 @@ body {
 }
 
 /* Interface */
-#interface {
-  width: 90%;
-  max-width: 400px;
+.conversor {
+  position: absolute;
+  top: 55%;
+  width: 80%;
+  height:50%;
   background-color: rgb(216, 202, 180);
   padding: 30px;
   border: 1px solid rgba(136, 136, 136, 0.7);
@@ -96,13 +98,12 @@ button:active {
   border-color: #badbcc;
 }
 
-#iframe {
-  position: absolute;
-  top: 100px;
-  left: 0;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 100%;
+.spotify {
+  position: relative;
+  top: -225px;
+  right: -23%;
+  width: 25%;
+
   overflow: hidden;
   margin-top: 20px;
   border-radius: 10px;
