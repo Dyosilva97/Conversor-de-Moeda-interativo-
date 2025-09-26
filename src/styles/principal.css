@@ -18,7 +18,7 @@ body {
   top: 55%;
   width: 80%;
   height:50%;
-  background-color: rgb(216, 202, 180);
+  background-color: rgba(0, 95, 44, 255);
   padding: 30px;
   border: 1px solid rgba(136, 136, 136, 0.7);
   border-radius: 20px;
@@ -43,7 +43,7 @@ button {
   padding: 10px;
   border: 1px solid #eee;
   border-radius: 6px;
-  background-color: rgb(212, 178, 25);
+  background-color: green;
   font-size: 18px;
   width: 100%;
   margin-top: 20px;
@@ -54,7 +54,7 @@ button {
 button:hover {
   color: white;
   border: 1px solid black;
-  background-color: rgba(109, 70, 252, 1);
+  background-color: rgb(5, 126, 31);
 }
 
 button:active {
