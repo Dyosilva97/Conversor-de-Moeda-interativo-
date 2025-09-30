@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <title>Conversor</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" media="(min-width: 599px)" href="../src/styles/principal.css">
-  <link rel="stylesheet" media="(max-width: 600px)" href="../src/styles/mobile.css" />
+  <link rel="stylesheet" media="(min-width: 599px)" href="../src/styles/styles.css">
   <link rel="icon" href="../assets/img/icons8-dinheiro-64.png" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="conversor.js" defer></script>
@@ -56,22 +55,22 @@
 
       // Dicionário que mapeia moedas -> imagens
       const imagensMoedas = {
-        "EUR": "https://flagcdn.com/w320/eu.png",
-        "USD": "https://flagcdn.com/w320/us.png",
-        "USDT": "https://payload-marketing.moonpay.com/api/media/file/5yc644eiu3j-29Hw6Bmpv5TP6zZR6vyp2a",
-        "CAD": "https://flagcdn.com/w320/ca.png",
-        "AUD": "https://flagcdn.com/w320/au.png",
-        "GBP": "https://flagcdn.com/w320/gb.png",
-        "ARS": "https://flagcdn.com/w320/ar.png",
-        "JPY": "https://flagcdn.com/w320/jp.png",
-        "CNY": "https://flagcdn.com/w320/cn.png",
-        "CHF": "https://flagcdn.com/w320/ch.png",
-        "ILS": "https://flagcdn.com/w320/il.png",
-        "BTC": "https://rizzattigestao.com.br/wp-content/uploads/Bitcoin.png",
-        "ETH": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/250px-Ethereum_logo_2014.svg.png",
-        "LTC": "https://png.pngtree.com/png-vector/20220913/ourmid/pngtree-isolated-white-background-icon-of-litecoin-ltc-coin-vector-png-image_39196686.png",
-        "DOGE": "https://static.vecteezy.com/system/resources/previews/024/239/834/non_2x/dogecoin-doge-crypto-free-png.png",
-        "XRP": "https://static.vecteezy.com/system/resources/previews/011/307/281/non_2x/xrp-badge-crypto3d-rendering-free-png.png"
+        "EUR": "https://encurtador.com.br/QBw1Y",
+        "USD": "https://encurtador.com.br/ZhUiO",
+        "USDT": "https://encurtador.com.br/HVRJJ",
+        "CAD": "https://encurtador.com.br/jg6e9",
+        "AUD": "https://encurtador.com.br/KF880",
+        "GBP": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2pwY3E5b3pubnplNHRuNHdtMHlneGIzZWMzbDZzMjd6ZHdvam5wNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bk2krRK3Ko27NPPcNM/giphy.gif",
+        "ARS": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExejJobGtrZjhpaG80d2g4d25mMXB6bTlpbTBydThnMDZ1eDliNWI0MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pIAzYlif9y6h7JuuDo/giphy.gif",
+        "JPY": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXRycGRtZjV3NXIwZDkxY2Myanlva2NxaXByZWRnMmdjb3U1YnVvdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yySlJgLRqRruU/giphy.gif",
+        "CNY": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGMwMnlvZDQydTllbThiazVicXhhamdocXJqNGF6eXY2bTZidHd0MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MXXSnHcxssba1h4vZJ/giphy.gif",
+        "CHF": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXUwOHRuY3d3Y3lwNGR0c3NzNzY1NWRxYTJvdW8xOHVyMnNyOThyaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0FeaQBS7YQV0oSt2/giphy.gif",
+        "ILS": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmNpeW82djhqam0xeWhta3ZuZDE3NnhlODR5OHJieTlyN3MwOWxmZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4cLPinc3th5o8ScXS6/giphy.gif",
+        "BTC": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3UwMHR4bWt1eXp3bzJ5MHRncTlyNmc0cnFoaTUyaWZ1aGFuZmx3biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EkO6UqwhwcKFqEYXQO/giphy.gif",
+        "ETH": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExODVnbXJ4MzA0aXVxNW0yajRtNnMxZWo5bTBjcXNncjU2czhpenhoNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qz5ITuBg5uvLy0yiRY/giphy.gif",
+        "LTC": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3BsNnBhd3prcnQ1bzBrbmlvOGFmeXE2ZmQ2aGhtdG9jMng2OGJuZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LstKLGxYqzCGOvkrLt/giphy.gif",
+        "DOGE": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3g5d2IzcWloMTRhdDc5eGR3eml4eXZ3NHdqeWh3Mmdxdnh2aXRsYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9FQ89bO3TipLASwmRs/giphy.gif",
+        "XRP": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHBlMmVvYnJ4cHNjbnJybXVtajB5aXdkZWZmMDEzZGdiZWlvODk1MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dZQZtGw8dJRwPTDFWo/giphy.gif"
       };
 
       // Evento de mudança
@@ -95,6 +94,29 @@
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
       </iframe>
     </div>
+
+    <div class="stock-container">
+      <!-- TradingView Gráfico -->
+      <div class="tradingview-widget-container" style="height:400px; width:100%">
+        <div id="tradingview_chart"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+          new TradingView.widget({
+            "container_id": "tradingview_chart",
+            "width": "100%",
+            "height": 400,
+            "symbol": "BMFBOVESPA:PETR4",
+            "interval": "D",
+            "timezone": "America/Sao_Paulo",
+            "theme": "dark",
+            "style": "1",
+            "locale": "br",
+            "toolbar_bg": "#1e293b",
+            "enable_publishing": false,
+            "allow_symbol_change": true
+          });
+        </script>
+      </div>
 
 </body>
 
