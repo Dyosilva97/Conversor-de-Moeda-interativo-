@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('https://media.licdn.com/dms/image/v2/D4D12AQH4cITdtOkxEA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1715018767172?e=2147483647&v=beta&t=xWbkB9E2mVvMQ6m_s51KaLtx7SW7TkbDbF3H1FyQjxU');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Interface */
+.conversor {
+  position: absolute;
+  top: 5%;
+  width: 80%;
+  height:59%;
+  background-color: rgb(104, 110, 102);
+  padding: 30px;
+  border: 1px solid rgba(136, 136, 136, 0.7);
+  border-radius: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Foto */
+#foto {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#moedaImg {
+  max-width: 200px;
+  height: auto;
+  display: none;
+}
+
+/* Botões */
+button {
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background-color: rgb(212, 178, 25);
+  font-size: 18px;
+  width: 100%;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 350ms;
+}
+
+button:hover {
+  color: white;
+  border: 1px solid black;
+  background-color: rgba(109, 70, 252, 1);
+}
+
+button:active {
+  background-color: rgb(57, 42, 110);
+}
+
+/* Título */
+#titulo {
+  margin: 0 0 20px 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Atualização */
+#atualizacao {
+  margin-top: 10px;
+  display: block;
+  color: gray;
+  font-size: 14px;
+}
+
+/* Alertas */
+.alerta {
+  position: relative;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  display: none;
+}
+
+#falha {
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+}
+
+#sucesso {
+  color: #0f5132;
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+}
+
+.spotify {
+  position: relative;
+  top: 350px;
+  right: -23%;
+  width: 50%;
+
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.stock-container {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  margin-bottom: 100px;
+  
+  position: absolute;
+  left: 5%;
+  width: 39%;
+  top: 68%;
+}
